@@ -4,6 +4,7 @@ import ExpenseLine from './expense-line';
 class Expenses extends React.Component {
 
     constructor() {
+        super();
         this.state = {
             expenses: []
         };
@@ -13,8 +14,13 @@ class Expenses extends React.Component {
         this.state.expenses.push({
             label: '',
             amount: 0,
-            category: null
+            category: null,
+            id: this.state.expenses.length
         });
+    }
+
+    expenseChange(expenseId, value) {
+        this.state.expenses[expenseId].amount = value;
     }
 
     render() {
@@ -23,7 +29,7 @@ class Expenses extends React.Component {
               { this.state.expenses.map((expense) => {
                     return (<ExpenseLine expense={ expense } />);
                 }) }
-              <button onClick={ addExpense }>Add expense</button>
+              <button onClick={ this.addExpense }>Add expense</button>
             </div>);
     }
 }
