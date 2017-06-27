@@ -26,6 +26,7 @@ class ExpensesStore extends ReduceStore {
                     id,
                     value: action.value,
                     category: action.category,
+                    label: action.label
                 }));
 
             default:
