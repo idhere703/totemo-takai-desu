@@ -27,6 +27,7 @@ class Expenses extends React.Component {
     }
 
     expenseChange(expenseId, value) {
+        console.log('Expense update', expenseId, value);
         const expenses = this.state.expenses;
         expenses[expenseId].amount = value;
         this.setState({
@@ -37,8 +38,8 @@ class Expenses extends React.Component {
     render() {
         return (
             <div>
-              { this.state.expenses.map((expense) => {
-                    return (<ExpenseLine expense={ expense } expenseChange={ this.expenseChange } />);
+              { this.state.expenses.map((expense, index) => {
+                    return (<ExpenseLine key={ `expense-${index}` } expense={ expense } expenseChange={ this.expenseChange } />);
                 }) }
               <button onClick={ this.addExpense }>Add expense</button>
             </div>);

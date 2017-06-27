@@ -10,9 +10,9 @@ class ExpenseLine extends React.Component {
         <div>
           { this.props.expense.label }
         </div>
-        <input onChange={ () => {
-                            this.props.expenseChange(this.props.expense.id, this.props.expense.amount)
-                          } } value={ this.props.expense.amount } />
+        <input type="number" onChange={ () => {
+                                          this.props.expenseChange(this.props.expense.id, this)
+                                        } } />
       </div>);
   }
 }
