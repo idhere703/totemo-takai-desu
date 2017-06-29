@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ExpensesView = (props) => {
     return <div>
              <Header {...props} />
@@ -52,11 +51,11 @@ const Footer = (props) => {
     return (
         <footer>
           <span>
-                                { 'Total:' }
-                                <strong>
-                                  { props.expenses.reduce((tot, expense) => tot += expense.value) }
-                                </strong>
-                              </span>
+        { 'Total:' }
+        <strong>
+            { props.expenses.reduce((tot, expense) => tot += expense.value) }
+        </strong>
+        </span>
         </footer>
         );
 }

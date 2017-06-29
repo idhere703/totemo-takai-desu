@@ -2,11 +2,22 @@ import ExpensesActionTypes from './ExpensesActionTypes';
 import ExpensesDispatcher from './ExpensesDispatcher';
 
 const Actions = {
-    addExpense(expenseId, value) {
+    addExpense(expense) {
         ExpensesDispatcher.dispatch({
             type: ExpensesActionTypes.ADD_EXPENSE,
-            expenseId,
-            value
+            expense
+        });
+    },
+    deleteExpense(id) {
+        ExpenseDispatcher.dispatch({
+            type: ExpenseActionTypes.DELETE_EXPENSE,
+            id,
+        });
+    },
+    editExpense(expense) {
+        ExpenseDispatcher.dispatch({
+            type: ExpenseActionTypes.EDIT_EXPENSE,
+            expense,
         });
     },
 };

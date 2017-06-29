@@ -17,10 +17,6 @@ class ExpensesStore extends ReduceStore {
     reduce(state, action) {
         switch (action.type) {
             case ExpensesActionTypes.ADD_EXPENSE:
-                // Don't add expense with no value.
-                if (!action.value) {
-                    return state;
-                }
                 const id = Counter.increment();
                 return state.set(id, new Expense({
                     id,
@@ -28,6 +24,13 @@ class ExpensesStore extends ReduceStore {
                     category: action.category,
                     label: action.label
                 }));
+            case ExpensesActionTypes.DELETE_EXPENSE:
+                return state.delete(action.id);
+
+            case ExpensesActionTypes.EDIT_EXPENSE:
+                return state.update(
+                    ...action.expense,
+                );
 
             default:
                 return state;
