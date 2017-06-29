@@ -31,7 +31,6 @@ class ExpensesStore extends ReduceStore {
                 return state.update(
                     ...action.expense,
                 );
-
             default:
                 return state;
         }

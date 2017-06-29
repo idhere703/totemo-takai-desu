@@ -9,14 +9,14 @@ const Actions = {
         });
     },
     deleteExpense(id) {
-        ExpenseDispatcher.dispatch({
-            type: ExpenseActionTypes.DELETE_EXPENSE,
+        ExpensesDispatcher.dispatch({
+            type: ExpensesActionTypes.DELETE_EXPENSE,
             id,
         });
     },
     editExpense(expense) {
-        ExpenseDispatcher.dispatch({
-            type: ExpenseActionTypes.EDIT_EXPENSE,
+        ExpensesDispatcher.dispatch({
+            type: ExpensesActionTypes.EDIT_EXPENSE,
             expense,
         });
     },
