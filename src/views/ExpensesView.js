@@ -35,8 +35,12 @@ const Main = (props) => {
                       { expense.label }
                     </label>
                     <div>
-                      <input type="number" onChange={ () => {
-                                                          props.onEditExpense(expense)
+                      <input type="number" onChange={ (event) => {
+                                                          const value = event.target.value;
+                                                          props.onEditExpense({
+                                                              value,
+                                                              id: expense.id
+                                                          });
                                                       } } />
                     </div>
                   </li>
