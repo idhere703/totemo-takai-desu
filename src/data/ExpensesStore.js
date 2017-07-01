@@ -20,9 +20,9 @@ class ExpensesStore extends ReduceStore {
                 const id = Counter.increment();
                 return state.set(id, new Expense({
                     id,
-                    value: action.value,
-                    category: action.category,
-                    label: action.label
+                    value: action.value || 0,
+                    category: action.category || '',
+                    label: action.label || ''
                 }));
             case ExpensesActionTypes.DELETE_EXPENSE:
                 return state.delete(action.id);

@@ -4,7 +4,7 @@ const ExpensesView = (props) => {
              <Header {...props} />
              <AddExpenseBtn {...props} />
              <Main {...props} />
-             { /*<Footer {...props} />*/ }
+             <Footer {...props} />
            </div>;
 };
 
@@ -51,12 +51,15 @@ const Main = (props) => {
 }
 
 const Footer = (props) => {
+    console.log([...props.expenses.values()]);
     if (props.expenses.size === 0) {
         return null;
     }
+    let total = 0;
+    [...props.expenses.values()].forEach((expense) => total += parseFloat(expense.value));
     return (
         <footer>
-          <span>{ 'Total:' }<strong>{ [...props.expenses.values()].reduce((tot, expense) => tot += expense.value) }</strong></span>
+          <span>{ 'Total:' }<strong>{ total }</strong></span>
         </footer>
         );
 }
