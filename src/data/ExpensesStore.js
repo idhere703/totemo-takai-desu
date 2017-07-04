@@ -28,9 +28,8 @@ class ExpensesStore extends ReduceStore {
                 return state.delete(action.id);
 
             case ExpensesActionTypes.EDIT_EXPENSE:
-            // return state.update({
-            //     ...action.expense
-            // });
+                console.log('Action', action);
+                return state.setIn([action.id, 'value'], parseFloat(action.value));
             default:
                 return state;
         }
