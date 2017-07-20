@@ -23,13 +23,14 @@ const Header = (props) => {
 }
 
 const Main = (props) => {
-    if (props.expenses.size === 0) {
+    const expenses = [...props.expenses.values()].reverse();
+    if (expenses.length === 0) {
         return null;
     }
     return (
         <section>
           <ul>
-            { [...props.expenses.values()].reverse().map(expense => (
+            { expenses.map(expense => (
                   <li key={ expense.id }>
                     <label>
                       { expense.label }
