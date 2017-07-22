@@ -43,6 +43,7 @@ const Main = (props) => {
                                                               id: expense.id
                                                           });
                                                       } } />
+                      <span onClick={ event => props.onDeleteExpense(expense.id) } className="fa fa-remove clickable"></span>
                     </div>
                   </li>
               )) }
