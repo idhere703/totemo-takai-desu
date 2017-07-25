@@ -1,8 +1,10 @@
 import React from 'react';
+import FileUpload from '../components/FileUpload';
 const ExpensesView = (props) => {
     return <div>
              <Header {...props} />
              <AddExpenseBtn {...props} />
+             <FileUploadField {...props} />
              <Main {...props} />
              <Footer {...props} />
            </div>;
@@ -71,5 +73,21 @@ const AddExpenseBtn = (props) => {
                                     value: 1,
                                     label: `Expense-${props.expenses.size}`
                                 }) }>Add Expense</button>
+        );
+};
+
+
+const FileUploadField = (props) => {
+    const options = {
+        baseUrl: 'http://127.0.0.1',
+        param: {
+            fid: 0
+        }
+    };
+    return (
+        <FileUpload options={ options }>
+          <button>choose</button>
+          <button>upload</button>
+        </FileUpload>
         );
 };
