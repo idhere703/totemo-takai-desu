@@ -33,7 +33,7 @@ const Main = (props) => {
             { expenses.map(expense => (
                   <li key={ expense.id }>
                     <label>
-                      { expense.label }
+                      { expense.label || `Expense: ${expense.id}` }
                     </label>
                     <div>
                       <input type="number" onChange={ (event) => {
