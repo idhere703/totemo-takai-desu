@@ -53,7 +53,6 @@ const Main = (props) => {
 }
 
 const Footer = (props) => {
-    console.log([...props.expenses.values()], props.expenses);
     if (props.expenses.size === 0) {
         return null;
     }
