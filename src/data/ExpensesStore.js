@@ -31,6 +31,9 @@ class ExpensesStore extends ReduceStore {
                 return state.update(action.expense.id, record => record = {
                     ...action.expense
                 });
+            case ExpensesActionTypes.UPLOAD_EXPENSE_FILE:
+                console.log('Action file upload', action.file);
+                return state;
             default:
                 return state;
         }

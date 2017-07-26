@@ -15,6 +15,7 @@ function getState() {
         onAddExpense: ExpensesActions.addExpense,
         onDeleteExpense: ExpensesActions.deleteExpense,
         onEditExpense: ExpensesActions.editExpense,
+        onUploadExpenseFile: ExpensesActions.uploadExpenseFile
     };
 }
 

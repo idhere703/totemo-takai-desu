@@ -20,6 +20,12 @@ const Actions = {
             expense,
         });
     },
+    uploadExpenseFile(file) {
+        ExpensesDispatcher.dispatch({
+            type: ExpensesActionTypes.UPLOAD_EXPENSE_FILE,
+            file
+        });
+    }
 };
 
 export default Actions;

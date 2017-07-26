@@ -85,7 +85,7 @@ const FileUploadField = (props) => {
         }
     };
     return (
-        <FileUpload options={ options }>
+        <FileUpload options={ options } props={ props }>
           <button>choose</button>
           <button>upload</button>
         </FileUpload>
