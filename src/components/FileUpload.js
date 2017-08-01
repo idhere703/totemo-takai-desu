@@ -13,13 +13,13 @@ export default class FileUploadField extends React.Component {
             param: {
                 fid: 0
             },
-            chooseFile: this.props.props.onUploadExpenseFile
+            chooseFile: this.props.onUploadExpenseFile
         }
         /*Use FileUpload with options*/
         /*Set two dom with ref*/
         return (
             <FileUpload options={ options }>
-              <button ref="chooseBtn">choose</button>
+              <button ref="chooseBtn">Choose expense file</button>
               { /* <button ref="uploadBtn">upload</button> */ }
             </FileUpload>
         )
