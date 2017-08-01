@@ -4,7 +4,8 @@ const Expense = Immutable.Record({
     id: '',
     category: '',
     value: 0,
-    label: ''
+    label: '',
+    recurring: 0,
 });
 
 export default Expense;

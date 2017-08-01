@@ -1,5 +1,7 @@
 import React from 'react';
 import FileUpload from '../components/FileUpload';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 const ExpensesView = (props) => {
     return <div>
              <Header {...props} />
@@ -11,18 +13,6 @@ const ExpensesView = (props) => {
 };
 
 export default ExpensesView;
-
-
-const Header = (props) => {
-    if (props.expenses.size === 0) {
-        return null;
-    }
-    return (
-        <header>
-          <h1>Expenses</h1>
-        </header>
-        );
-}
 
 const Main = (props) => {
     const expenses = [...props.expenses.values()].reverse();
@@ -51,19 +41,6 @@ const Main = (props) => {
               )) }
           </ul>
         </section>
-        );
-}
-
-const Footer = (props) => {
-    if (props.expenses.size === 0) {
-        return null;
-    }
-    let total = 0;
-    [...props.expenses.values()].forEach((expense) => total += parseFloat(expense.value));
-    return (
-        <footer>
-          <span>{ 'Total:' }<strong>{ total }</strong></span>
-        </footer>
         );
 }
 

@@ -32,7 +32,7 @@ class ExpensesStore extends ReduceStore {
                     ...action.expense
                 });
             case ExpensesActionTypes.UPLOAD_EXPENSE_FILE:
-                console.log('Action file upload', action.file);
+                console.log('Action file upload', action);
                 return state;
             default:
                 return state;
