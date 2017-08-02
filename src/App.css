@@ -1,3 +1,8 @@
+body {
+  background-color: #3C91E6;
+  color: #FAFFFD;
+}
+
 .App {
   text-align: center;
 }
@@ -15,7 +20,6 @@ ul {
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
 }
 
 .App-intro {
@@ -29,4 +33,8 @@ ul {
 
 .clickable {
   cursor: pointer; 
+}
+
+.add-button {
+  color: #342E37;
 }

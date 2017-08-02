@@ -2,9 +2,6 @@ import React from 'react';
 import FileUpload from 'react-fileupload';
 
 export default class FileUploadField extends React.Component {
-    constructor() {
-        super();
-    }
 
     render() {
         /*set properties*/
