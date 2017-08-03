@@ -1,12 +1,9 @@
 import React from 'react';
-import FileUpload from '../components/FileUpload';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 const ExpensesView = (props) => {
     return <div>
              <Header {...props} />
-             <AddExpenseBtn {...props} />
-             <FileUpload {...props} />
              <Main {...props} />
              <Footer {...props} />
            </div>;
@@ -43,12 +40,3 @@ const Main = (props) => {
         </section>
         );
 }
-
-const AddExpenseBtn = (props) => {
-    return (
-        <button type="button" onClick={ () => props.onAddExpense({
-                                    value: 1,
-                                    label: `Expense-${props.expenses.size}`
-                                }) }>Add Expense</button>
-        );
-};

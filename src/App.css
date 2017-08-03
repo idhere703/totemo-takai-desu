@@ -17,9 +17,15 @@ ul {
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  /* background-color: #342E37; */
   padding: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+}
+
+.App-header--logo {
+  flex-grow: 1;
 }
 
 .App-intro {
