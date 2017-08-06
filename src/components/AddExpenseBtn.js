@@ -2,8 +2,8 @@ import React from 'react';
 export default (props) => {
     // capture keyboard input
     document.onkeypress = (e) => {
-        // check for tab
-        if (e.keyCode == 32) {
+        console.log(e);
+        if (e.keyCode === 32 && e.target.name !== 'expense-line-item-name') {
             // check if an input is currently in focus
             // if (document.activeElement.nodeName.toLowerCase() != "input") {
             // prevent default spacebar event (scrolling to bottom)

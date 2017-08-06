@@ -44,3 +44,7 @@ ul {
 .add-button {
   color: #342E37;
 }
+
+.App--no-content {
+  padding: 20px;
+}
