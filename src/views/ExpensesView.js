@@ -25,14 +25,12 @@ const Main = (props) => {
       <ul>
         { expenses.map(expense => (
             <li key={ expense.id }>
-              <input name="expense-line-item-name" type="text" placeholder={ expense.label || `Expense: ${expense.id}` }>
-              { /* { expense.label || `Expense: ${expense.id}` } */ }
-              </input>
+              <input className="App--input-label" name="expense-line-item-name" type="text" placeholder={ expense.label || `Expense: ${expense.id}` } />
               <div>
-                <input type="number" onChange={ (event) => props.onEditExpense({
-                                                  value: event.target.value,
-                                                  id: expense.id
-                                                }) } name="expense-line-item" />
+                <input className="App--input-expense" type="number" onChange={ (event) => props.onEditExpense({
+                                                                                 value: event.target.value,
+                                                                                 id: expense.id
+                                                                               }) } name="expense-line-item" />
                 <span onClick={ event => props.onDeleteExpense(expense.id) } className="fa fa-remove clickable"></span>
               </div>
             </li>

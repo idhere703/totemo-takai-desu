@@ -48,3 +48,39 @@ ul {
 .App--no-content {
   padding: 20px;
 }
+
+.App--input-expense {
+  border: none;
+  border-bottom: 1px solid #342E37;
+  /* width: 100%; */
+  /* background-color: #3C91E6; */
+  padding-bottom: 5px
+}
+
+.App--input-label {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #342E37;
+  /* width: 100%; */
+   background-color: #3C91E6; 
+  padding-bottom: 15px;
+  color: #FAFFFD;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #FAFFFD;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #FAFFFD;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #FAFFFD;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #FAFFFD;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #FAFFFD;
+}
