@@ -84,3 +84,12 @@ ul {
 ::-ms-input-placeholder { /* Microsoft Edge */
    color:    #FAFFFD;
 }
+
+.App-header--upload-btn {
+  position: absolute;
+  right: 10px;
+}
+.App-header--add-expense {
+  position: absolute;
+  right: 135px;
+}
