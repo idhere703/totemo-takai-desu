@@ -6,7 +6,7 @@ export default (props) => {
     let total = 0;
     [...props.expenses.values()].forEach((expense) => total += parseFloat(expense.value));
     return (
-        <footer>
+        <footer className="App-footer">
           <span>{ 'Total:' }<strong>{ total }</strong></span>
         </footer>
         );
