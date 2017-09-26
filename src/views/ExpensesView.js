@@ -22,20 +22,22 @@ const Main = (props) => {
   }
   return (
     <section>
-      <ul>
+      <div>
         { expenses.map(expense => (
-            <li key={ expense.id }>
-              <input className="App--input-label" name="expense-line-item-name" type="text" placeholder={ expense.label || `Expense: ${expense.id}` } />
-              <div>
+            <div className="row gutters" key={ expense.id }>
+              <div className="col col-3">
+                <input className="App--input-label" name="expense-line-item-name" type="text" placeholder={ expense.label || `Expense: ${expense.id}` } />
+              </div>
+              <div class="col col-9">
                 <input className="App--input-expense" type="number" step="0.01" onChange={ (event) => props.onEditExpense({
                                                                                              value: event.target.value,
                                                                                              id: expense.id
                                                                                            }) } name="expense-line-item" />
                 <span onClick={ event => props.onDeleteExpense(expense.id) } className="fa fa-remove clickable"></span>
               </div>
-            </li>
+            </div>
           )) }
-      </ul>
+      </div>
     </section>
     );
 }
