@@ -71,7 +71,7 @@ ul {
   /* width: 100%; */
    background-color: #3C91E6; 
   padding-bottom: 15px;
-  color: #FAFFFD;
+  /* color: #FAFFFD; */
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
