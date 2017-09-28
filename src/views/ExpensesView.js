@@ -28,7 +28,7 @@ const Main = (props) => {
               <div className="col col-3">
                 <input className="App--input-label" name="expense-line-item-name" type="text" placeholder={ expense.label || `Expense: ${expense.id}` } />
               </div>
-              <div class="col col-9">
+              <div className="col col-9">
                 <input className="App--input-expense" type="number" step="0.01" onChange={ (event) => props.onEditExpense({
                                                                                              value: event.target.value,
                                                                                              id: expense.id
