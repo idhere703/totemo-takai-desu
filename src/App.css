@@ -1,6 +1,14 @@
 body {
   background-color: #3C91E6;
   color: #FAFFFD;
+  margin:40px auto;
+  max-width:650px;
+  line-height:1.6;
+  font-size:18px;
+  padding:010px
+}
+h1,h2,h3 {
+  line-height:1.2
 }
 
 .App {
@@ -25,7 +33,7 @@ ul {
 }
 
 .App-footer {
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   left: 10px;
   font-size: 20px;
@@ -40,12 +48,16 @@ ul {
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .clickable {
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .add-button {
@@ -69,36 +81,36 @@ ul {
   border: none;
   border-bottom: 1px solid #342E37;
   /* width: 100%; */
-   background-color: #3C91E6; 
+  background-color: #3C91E6;
   padding-bottom: 15px;
   /* color: #FAFFFD; */
 }
 
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #FAFFFD;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #FAFFFD;
-   opacity:  1;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #FAFFFD;
-   opacity:  1;
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #FAFFFD;
-}
-::-ms-input-placeholder { /* Microsoft Edge */
-   color:    #FAFFFD;
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #FAFFFD;
 }
 
-.App-header--upload-btn {
-  position: absolute;
-  right: 10px;
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #FAFFFD;
+  opacity: 1;
 }
-.App-header--add-expense {
-  position: absolute;
-  right: 135px;
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #FAFFFD;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #FAFFFD;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #FAFFFD;
 }
 
 .btn {

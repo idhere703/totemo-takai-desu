@@ -20,9 +20,9 @@ export default (props) => {
         }
     };
     return (
-        <button type="button" className="btn btn-default" onClick={ () => props.onAddExpense({
-                                                                value: 1,
-                                                                label: `Expense-${props.expenses.size}`
-                                                            }) }>Add Expense</button>
+        <button type="button" className="button small" onClick={ () => props.onAddExpense({
+                                                             value: 1,
+                                                             label: `Expense-${props.expenses.size}`
+                                                         }) }>Add Expense</button>
         );
 };

@@ -25,10 +25,10 @@ const Main = (props) => {
       <div>
         { expenses.map(expense => (
             <div className="row" key={ expense.id }>
-              <div className="col col-1">
+              <div className="col col-6">
                 <input className="App--input-label" name="expense-line-item-name" type="text" placeholder={ expense.label || `Expense: ${expense.id}` } />
               </div>
-              <div className="col col-2">
+              <div className="col col-6">
                 <input className="App--input-expense" type="number" step="0.01" onChange={ (event) => props.onEditExpense({
                                                                                              value: event.target.value,
                                                                                              id: expense.id

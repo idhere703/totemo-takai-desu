@@ -16,7 +16,7 @@ export default class FileUploadField extends React.Component {
         /*Set two dom with ref*/
         return (
             <FileUpload options={ options }>
-              <button ref="chooseBtn" className="btn btn-default">Choose expense file</button>
+              <button ref="chooseBtn" className="button secondary small">Choose File</button>
               { /* <button ref="uploadBtn">upload</button> */ }
             </FileUpload>
         )

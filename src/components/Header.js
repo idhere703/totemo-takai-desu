@@ -4,12 +4,12 @@ import AddExpenseBtn from './AddExpenseBtn';
 
 export default (props) => {
   return (
-    <header className="App-header">
-      <div>Expenses</div>
-      <div className="App-header--add-expense">
+    <header className="App-header row">
+      <div className="col col-6">Expenses</div>
+      <div className="col">
         <AddExpenseBtn {...props} />
       </div>
-      <div className="App-header--upload-btn">
+      <div className="col">
         <FileUpload {...props} />
       </div>
     </header>
