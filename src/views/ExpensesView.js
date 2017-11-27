@@ -16,7 +16,7 @@ const Main = (props) => {
   if (expenses.length === 0) {
     return (      <div>
                     <p className="App--no-content">
-                      Use negative values to represent gains. Click the spacebar to add an expense; buttons are for noobs.
+                      Use negative values to represent gains. Click the space-bar to add an expense; buttons are for noobs.
                     </p>
                   </div>);
   }

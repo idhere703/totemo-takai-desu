@@ -1,6 +1,5 @@
 import Immutable from 'immutable';
 import { ReduceStore } from 'flux/utils';
-import request from 'request';
 import ExpensesActionTypes from './ExpensesActionTypes';
 import ExpensesDispatcher from './ExpensesDispatcher';
 import Counter from './Counter';

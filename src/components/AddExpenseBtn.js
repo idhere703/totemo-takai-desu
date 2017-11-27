@@ -19,10 +19,11 @@ export default (props) => {
         // }
         }
     };
+    const runAdd = (size) => props.onAddExpense({
+        value: 1,
+        label: `Expense-${size}`
+    })
     return (
-        <button type="button" className="button small" onClick={ () => props.onAddExpense({
-                                                             value: 1,
-                                                             label: `Expense-${props.expenses.size}`
-                                                         }) }>Add Expense</button>
+        <button type="button" className="button small" onClick={ () => runAdd(props.expenses.size) }>Add Expense</button>
         );
 };
